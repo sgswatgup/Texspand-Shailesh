@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/structure/infragistics.css" rel="stylesheet" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.lob.js"></script>
+
+</head>
+<body>
+ <div class="container-fluid">
+	<header class="header1">
+	<div class="row">
+	
+		<div class="col-md-3">
+			<img alt="Bootstrap Image Preview" src="Dreamhouse_logo.jpg">
+		</div>
+		<div class="col-md-7">
+		
+			<div class="page-header" >
+				<h2>
+					Fair Deal Dream House
+				</h2>
+			</div>
+			<nav>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+				<li background-color:"#5F9EA0">
+					<a href="#">Search</a>
+				</li>
+				<li>
+					<a href="#">Shortlisted</a>
+				</li>
+				<li>
+					<a href="#">My Bookings</a>
+				</li>
+				<li>
+					<a href="#">My Referals</a>
+				</li>
+				</nav>
+				</ul></div>
+				<div class="col-md-2">
+			 <a href="#">SignUp</a> 
+			 			<button type="button" class="btn btn-default">
+				Login
+			</button>
+		</div>
+	</div>
+	</header>
+				
+    <div>
+	<h4>Location</h4>
+	<form id="searchbox" action="">
+    <input id="search" type="text" placeholder="select Location">
+    <input id="submit" type="submit" value="Find">
+	</form>
+	</div>
+     <div class="right_align">
+    <h4 class="combo-label1">Builder</h4>
+    <div id="BuilderSelectCombo"></div>
+	</div>
+     <div class="right_align">
+    <h4 class="combo-label2" placeholder="min-max">Budget</h4>
+    <div id="BudgetSelectCombo"></div></div>
+     <div class="right_align">
+    <h4 class="combo-label3">Type</h4>
+    <div id="TypeSelectCombo"></div></div>
+	<br/><div class="buttons">
+	<br> <button type="button">Search</button> </br>
+	 </div>
+	 
+	<div class="table-row" width="100%"> <table border="1">
+	<tr class="table-row" width="100%">
+		<td class="table-column1" ><img src="index.jpg" alt="image">
+		</td>
+	<td class="table-column"  ><h4>Krishna apra Property</h4>
+		Floor 1, flat area 1400sqft, 3bedrooms,2 bathrooms, 4 balcony, store room, pool facing</td>
+	<td class="table-column"> For more details
+		<br/><a href="http://www.google.com">Click Here</a></td>
+	</tr>
+	<tr>
+	<td><img src="index.jpg" alt="image"></td>
+	<td><h4>Olive County</h4>
+	Floor 1, flat area 1400sqft, 3bedrooms,2 bathrooms, 4 balcony, store room, pool facing</td>
+	<td> for more details
+	<br/><a href="http://www.google.com">Click Here</a></td>
+	</tr>
+	<tr>
+	<td><img src="index.jpg" alt="image"></td>
+	<td><h4>Krishna apra Property</h4>
+	Floor 1, flat area 1400sqft, 3bedrooms,2 bathrooms, 4 balcony, store room, pool facing</td>
+	<td> for more details
+	<br/><a href="http://www.google.com">Click Here</a></td>
+	</tr>
+	</table>
+	</div>
+	<div>
+	 <ul class="pagination">
+  <li><a href="#">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">Next</a></li>
+</ul>
+	</div>
+
+	
+    <script>
+
+        var build = [
+            { Name: "Krishna apra garden" },
+            { Name: "supertech icon" },
+            { Name: "Amrapali" },
+			{ Name: "Olive County" },
+            
+			
+        ];
+		var Budgt = [
+            { Name: "10-30lakh" },
+            { Name: "30-50lakh" },
+            { Name: "50-90lakh" },
+			{ Name: "90lakh-1crore" },
+			{ Name: "1crore" },
+			{ Name: "1-5crore" },
+            
+			
+        ];
+		var Type = [
+            { Name: "1bhk" },
+            { Name: "2bhk" },
+            { Name: "3bhk" },
+            
+			
+        ];
+
+        $(function () {
+
+            $("#BuilderSelectCombo").igCombo({
+                width: "270px",
+                dataSource: build,
+                textKey: "Name",
+                valueKey: "Name",
+				multiSelection: {
+				enabled: true,
+               showCheckboxes: true
+			   }
+            });
+
+            $("#BudgetSelectCombo").igCombo({
+                width: "270px",
+                dataSource: Budgt,
+                textKey: "Name",
+                valueKey: "Name",
+                multiSelection: {
+                    enabled: true
+                }
+            });
+
+            $("#TypeSelectCombo").igCombo({
+                width: "270px",
+                dataSource: Type,
+                textKey: "Name",
+                valueKey: "Name",
+    			dropDownOnFocus: true
+                
+            });
+
+        });
+
+    </script>
+	
+<div >
+<footer>
+<table class="colour">
+<tr>
+&copy;copywrite
+</tr>
+</table>
+</footer>
+</div>
+</body>
+</html>
