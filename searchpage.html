@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/structure/infragistics.css" rel="stylesheet" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.lob.js"></script>
+
+</head>
+<body>
+ <div class="container-fluid">
+	<header class="header1">
+		<div class="row">	
+			<div class="col-md-5">
+				<img alt="Bootstrap Image Preview" src="Dreamhouse_logo.jpg">
+			</div>
+			<div class="col-md-4">		
+				<div  >
+					<h2>
+						Fair Deal Dream House
+					</h2>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<text>Welcome user !</text>
+			</div>
+			<div>
+				<button type="button" class="btn btn-default">Login</button>
+			</div>
+		</div><hr/>
+		<div class="row">	
+			<div class="col-md-12">
+				<nav>
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#">Home</a>
+						</li>
+						<li background-color:"#5F9EA0">
+							<a href="#">Search</a>
+						</li>
+						<li>
+							<a href="#">Shortlisted</a>
+						</li>
+						<li>
+							<a href="#">My Bookings</a>
+						</li>
+						<li>
+							<a href="#">My Referrals</a>
+						</li>				
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div>
+			<h3> Property Search</h3>
+		</div>
+	</section>
+	<hr/>
+    <div class="row">
+		<div class=" col-md-2">
+			<h4 height="10px"  >Location</h4>
+		</div>
+		<div class="col-md-2">
+			<h4 class="combo-label1">Builder</h4>
+		</div>
+		<div class="col-md-2">
+			<h4 class="combo-label2" placeholder="min-max">Budget</h4>
+		</div>
+		<div class="col-md-2">
+			<h4 class="combo-label3">Type</h4>
+		</div>
+		<div class="col-md-2">
+			<h4 class="combo-label4" placeholder="Construction Status">Construction Status</h4>
+		</div>			 
+		<div class="col-md-2">
+		</div>
+	 </div>
+	 <div class="row">
+		<div class=" col-md-2">
+			<input id="search" type="text" placeholder=" Add Location" />
+		</div>
+		<div class="col-md-2">
+			<div id="BuilderSelectCombo"></div>
+		</div>
+		<div class="col-md-2">
+			<div id="BudgetSelectCombo"></div>
+		</div>
+		<div class="col-md-2">
+			<div id="TypeSelectCombo"></div>
+		</div>
+		<div class="col-md-2">
+			<div id="ConstructionSelectCombo"></div>
+		</div>			 
+		<div class="col-md-2">
+			<button type="button">Search</button>
+		</div>
+	 </div><!--Desktop Search Page-->
+	 <hr/>
+	<!--<div class="table-row" width="100%"> 
+	<table border="1" width="100%" cellpadding="10%" cellspacing="10%">
+	<tr class="table-row">
+	<td class="table-column1"><strong>ADDRESS<strong></td>
+	<td class="table-column1" ><strong>BUILDER<strong></td>
+	<td class="table-column1"><strong>PROJECT<strong></td>
+	<td class="table-column1" ><strong>TYPE<strong></td>
+	<td class="table-column1"><strong>NO. OF UNITS<strong></td>
+	<td class="table-column1"><strong>BASIC RATE (Per Sq. ft.)<strong></td>
+	<td class="table-column1"><strong>CONSTRUCTION STATUS<strong></td>
+	<td class="table-column1"><strong>Others<strong></td>
+	<td class="table-column1"><strong>INTEREST<strong></td>
+	</tr>
+	<tr class="table-row">
+		<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+		</td>
+		<td class="table-column1">Jai Krishna</td>
+		<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Krishna apra Property</a></td>
+		<td class="table-column1"><a href="#" data-toggle="tooltip" title="area 1450sqft,3 bedrooms, 2 bathrooms,1 store, park facing,4 balcony">3bhk</a></td>
+		<td class="table-column1"><a href="#"data-toggle="tooltip" title="no. of units">20</a></td>
+		<td class="table-column1">2000</td>
+		<td class="table-column1">Just Launched</td>
+		<td class="table-column1"  ></td>
+		<td class="table-column1"  ><a href="#">Add to shortlist</td>
+		</tr>
+	<tr class="table-row">
+		<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+		</td>
+		<td class="table-column1">Jai Krishna</td>
+		<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Krishna apra Property</a></td>
+		<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="area 1800sqft,4 bedrooms, 4 bathrooms,1 store, pool facing,4 balcony">4bhk</a></td>
+		<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="no. of units">15</a></td>
+		<td class="table-column1"  >2000</td>
+		<td class="table-column1"  >Just Launched</td>
+		<td class="table-column1"  ></td>
+		<td class="table-column1"  ><a href="#">Add to Shortlist</a></td>
+	</tr>
+	<tr class="table-row">
+	<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+	</td>
+	<td class="table-column1">Rajvendar hari</td>
+	<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Olive County</a></td>
+	<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="area 1500sqft,3 bedrooms, 3 bathrooms,1 store, pool facing,4 balcony">3bhk</a></td>
+	<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="no.of units">18</a></td>
+	<td class="table-column1"  >2700</td>
+	<td class="table-column1"  >Under Construction</td>
+	<td class="table-column1"  ></td>
+	<td class="table-column1"  >Shortlisted</td>
+	</tr>
+	<tr>
+	<tr class="table-row">
+	<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+	</td>
+	<td class="table-column1">Raja Ram</td>
+	<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Amrapali</a></td>
+	<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="area 1500sqft,3 bedrooms, 3 bathrooms,1 store, road facing,4 balcony">3bhk</a></td>
+	<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="no.of units">15</a></td>
+	<td class="table-column1"  >2580</td>
+	<td class="table-column1"  >Under Construction</td>
+	<td class="table-column1"  ></td>
+	<td class="table-column1"  >Shortlisted</td>
+	</tr>
+	</table>
+	</div>-->
+		<div class="table-row" width= 100%> 
+				<table border="1" width="100%" cellpadding="10%" >
+					<tr class="table-row" >
+						<td class="table-column2"><strong>ADDRESS</strong></td>
+						<td class="table-column2" ><strong>BUILDER</strong></td>
+						<td class="table-column2"><strong>PROJECT</strong></td>
+						<td class="table-column2" ><strong>TYPE</strong></td>
+						<td class="table-column2"><strong>NO. OF UNITS</strong></td>
+						<td class="table-column2"><strong>BASIC RATE (Per Sq. ft.)</strong></td>
+						<td class="table-column2"><strong>CONSTRUCTION STATUS</strong></td>
+						<td class="table-column2"><strong>OTHERS</strong></td>
+						<td class="table-column2"><strong>INTEREST</strong></td>
+					</tr>
+					<tr class="table-row">
+						<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+						</td>
+						<td class="table-column1">Jai Krishna</td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Krishna apra Property</a></td>
+						<td class="table-column1"><a href="#" data-toggle="tooltip" title="area 1450sqft,3 bedrooms, 2 bathrooms,1 store, park facing,4 balcony">3bhk</a></td>
+						<td class="table-column1"><a href="#"data-toggle="tooltip" title="no. of units">20</a></td>
+						<td class="table-column1">2000</td>
+						<td class="table-column1">Just Launched</td>
+						<td class="table-column1"  ></td>
+						<td class="table-column1"  ><a href="#">Add to shortlist</a></td>
+					</tr>
+					<tr class="table-row">
+						<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+						</td>
+						<td class="table-column1">Jai Krishna</td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Krishna apra Property</a></td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="area 1800sqft,4 bedrooms, 4 bathrooms,1 store, pool facing,4 balcony">4bhk</a></td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="no. of units">15</a></td>
+						<td class="table-column1"  >2000</td>
+						<td class="table-column1"  >Just Launched</td>
+						<td class="table-column1"  ></td>
+						<td class="table-column1"  ><a href="#">Add to Shortlist</a></td>
+					</tr>
+					<tr class="table-row">
+						<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+						</td>
+						<td class="table-column1">Rajvendar hari</td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Olive County</a></td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="area 1500sqft,3 bedrooms, 3 bathrooms,1 store, pool facing,4 balcony">3bhk</a></td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="no.of units">18</a></td>
+						<td class="table-column1"  >2700</td>
+						<td class="table-column1"  >Under Construction</td>
+						<td class="table-column1"  ></td>
+						<td class="table-column1"  >Shortlisted</td>
+					</tr>
+					<tr class="table-row">
+						<td class="table-column1" ><a href="https://www.google.co.in/maps/place/Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6493845,77.3521163,14z/data=!3m1!4b1!4m2!3m1!1s0x390cfabbae31843d:0xf5857c74104528f7?hl=en" data-toggle="tooltip" title="View google maps">Indirapuram</a>
+						</td>
+						<td class="table-column2">Raja Ram</td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="Link for more detail info">Amrapali</a></td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="area 1500sqft,3 bedrooms, 3 bathrooms,1 store, road facing,4 balcony">3bhk</a></td>
+						<td class="table-column1"  ><a href="#" data-toggle="tooltip" title="no.of units">15</a></td>
+						<td class="table-column1"  >2580</td>
+						<td class="table-column1"  >Under Construction</td>
+						<td class="table-column1"  ></td>
+						<td class="table-column1"  >Shortlisted</td>
+					</tr>
+				</table>
+			</div>
+			</div>
+	
+	
+	
+
+	
+    <script>
+
+        var build = [
+            { Name: "Krishna apra garden" },
+            { Name: "supertech icon" },
+            { Name: "Amrapali" },
+			{ Name: "Olive County" }, 
+        ];
+		var Budgt = [
+            { Name: "10-30lakh" },
+            { Name: "30-50lakh" },
+            { Name: "50-90lakh" },
+			{ Name: "90lakh-1crore" },
+			{ Name: "1crore" },
+			{ Name: "1-5crore" },
+        ];
+		var Type = [
+            { Name: "1bhk" },
+            { Name: "2bhk" },
+            { Name: "3bhk" },	
+        ];
+		var Construct = [
+            { Name: "Just Launched" },
+            { Name: ">2years" },
+            { Name: "1-2 years" },
+			{ Name: "6-12 months" },
+			{ Name: "<6months" },
+		];
+		var Loc = [
+            { Name: "Delhi/ncr" },
+            { Name: "Indirapuram" },
+            { Name: "Noida" },
+			{ Name: "Ghaziabad" },
+			{ Name: "" },
+		];
+
+        $(function () {
+            $("#BuilderSelectCombo").igCombo({
+                width: "200px",
+                dataSource: build,
+                textKey: "Name",
+                valueKey: "Name",
+				multiSelection: {
+				enabled: true,
+               showCheckboxes: true
+			   }
+            });
+
+            $("#BudgetSelectCombo").igCombo({
+                width: "200px",
+                dataSource: Budgt,
+                textKey: "Name",
+                valueKey: "Name",
+                multiSelection: {
+                    enabled: true
+                }
+            });
+
+            $("#TypeSelectCombo").igCombo({
+                width: "200px",
+                dataSource: Type,
+                textKey: "Name",
+                valueKey: "Name",
+    			dropDownOnFocus: true
+                
+            });
+			
+			$("#ConstructionSelectCombo").igCombo({
+                width: "200px",
+                dataSource: Construct,
+                textKey: "Name",
+                valueKey: "Name",
+    			dropDownOnFocus: true
+                
+            });
+        });
+
+    </script>
+	
+
+<footer class="navbar navbar-default navbar-fixed-bottom">
+<div class="row">
+<div class="col-md-12">
+<span class="label label-default">copyright  &copy;</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
